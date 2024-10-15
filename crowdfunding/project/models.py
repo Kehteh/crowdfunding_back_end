@@ -9,7 +9,7 @@ class Project(models.Model):
    image = models.URLField()
    is_open = models.BooleanField()
    date_created = models.DateTimeField(auto_now_add=True)
-   ower = models.ForeignKey(
+   owner = models.ForeignKey(
       get_user_model(),
       on_delete=models.CASCADE,
       related_name='owned_projects'
