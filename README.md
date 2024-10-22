@@ -12,26 +12,26 @@ Your crowdfunding project must:
 
 - [ ] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React. 
 - [ ] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
-- [ ] Have a clear target audience.
-- [ ] Have user accounts. A user should have at least the following attributes:
-  - [ ] Username
-  - [ ] Email address
-  - [ ] Password
-- [ ] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
-  - [ ] Title
-  - [ ] Owner (a user)
-  - [ ] Description
-  - [ ] Image
-  - [ ] Target amount to fundraise
-  - [ ] Whether it is currently open to accepting new supporters or not
-  - [ ] When the project was created
-- [ ] Ability to “pledge” to a project. A pledge should include at least the following attributes:
-  - [ ] An amount
-  - [ ] The project the pledge is for
-  - [ ] The supporter/user (i.e. who created the pledge)
-  - [ ] Whether the pledge is anonymous or not
-  - [ ] A comment to go along with the pledge
-- [ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
+- [X] Have a clear target audience.
+- [X] Have user accounts. A user should have at least the following attributes:
+  - [X] Username
+  - [X] Email address
+  - [X] Password
+- [X] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
+  - [X] Title
+  - [X] Owner (a user)
+  - [X] Description
+  - [X] Image
+  - [X] Target amount to fundraise
+  - [x] Whether it is currently open to accepting new supporters or not
+  - [X] When the project was created
+- [X] Ability to “pledge” to a project. A pledge should include at least the following attributes:
+  - [X] An amount
+  - [X] The project the pledge is for
+  - [X] The supporter/user (i.e. who created the pledge)
+  - [X] Whether the pledge is anonymous or not
+  - [X] A comment to go along with the pledge
+- [X] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
 - [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [ ] Return the relevant status codes for both successful and unsuccessful requests to the API.
 - [ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
