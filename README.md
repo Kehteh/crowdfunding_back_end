@@ -11,7 +11,7 @@ Kickstarter, Go Fund Me, Kiva, Change.org, Patreon… All of these different web
 Your crowdfunding project must:
 
 - [ ] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React. 
-- [ ] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
+- [X] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
 - [X] Have a clear target audience.
 - [X] Have user accounts. A user should have at least the following attributes:
   - [X] Username
@@ -32,10 +32,10 @@ Your crowdfunding project must:
   - [X] Whether the pledge is anonymous or not
   - [X] A comment to go along with the pledge
 - [X] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
-- [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
-- [ ] Return the relevant status codes for both successful and unsuccessful requests to the API.
+- [X] Implement suitable permissions, e.g. who is allowed to delete a pledge?
+- [X] Return the relevant status codes for both successful and unsuccessful requests to the API.
 - [ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
-- [ ] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
+- [X] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [ ] Implement responsive design.
 
 ## Additional Notes
