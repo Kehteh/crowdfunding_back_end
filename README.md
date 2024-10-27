@@ -155,6 +155,17 @@ NOTE: As user is owner of this project, bearer authentication is on so that no o
 
 
 
+API Spec:
+
+![Table of API spec for "vexx".](./vexxpics/API_spec_vexx.png)
+
+
+ERD/Database schema:
+
+![ERD for "vexx"](./vexxpics/VexxERD.drawio.png)
+
+
+
 
 
 
