@@ -1,12 +1,12 @@
 # Crowdfunding Back End
-{{ your name here }}
+{{ Vexx }}
 
 ## Planning:
 ### Concept/Name
-{{ Include a short description of your website concept here. }}
+{{ Vexx (from the word vexatious) is a crowdfunding platform designed for users who want to create crowdfunding projects targeted towards fixing environmental issues that may not be addressed either adequately or at all by the government. }}
 
 ### Intended Audience/User Stories
-{{ Who are your intended audience? How will they use the website? }}
+{{ The intended audience are people who are dissatisfied with the lack of action and impact the government has on the Australian ecosystem. Users are able to create projects that are intended to fix/positively impact important ecological issues and then other users can support the project by pledging. An example of this would be a project aimed at reestablishing black cockatoo feeding territory by a crowdfunded nursery that educates people about the dwindling food supply caused by development. They also grow and supply discounted trees to consumers. }}
 
 ### Front End Pages/Functionality
 - {{ A page on the front end }}

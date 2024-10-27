@@ -10,7 +10,7 @@ Kickstarter, Go Fund Me, Kiva, Change.org, Patreon… All of these different web
 ## Project Requirements
 Your crowdfunding project must:
 
-- [ ] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React. 
+- [X] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React. 
 - [X] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
 - [X] Have a clear target audience.
 - [X] Have user accounts. A user should have at least the following attributes:
@@ -34,7 +34,7 @@ Your crowdfunding project must:
 - [X] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
 - [X] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [X] Return the relevant status codes for both successful and unsuccessful requests to the API.
-- [ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
+- [X] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 - [X] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [ ] Implement responsive design.
 
@@ -47,9 +47,19 @@ Note that while this is a crowdfunding website, actual money transactions are ou
 To submit, fill out [this Google form](https://forms.gle/34ymxgPhdT8YXDgF6), including a link to your Github repo. Your lead mentor will respond with any feedback they can offer, and you can approach the mentoring team if you would like help to make improvements based on this feedback!
 
 Please include the following in your readme doc:
-- [ ] A link to the deployed project.
-- [ ] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
-- [ ] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
-- [ ] A screenshot of Insomnia, demonstrating a token being returned.
-- [ ] Step by step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
-- [ ] Your refined API specification and Database Schema.
+- [X] A link to the deployed project.
+- [X] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
+- [X] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
+- [X] A screenshot of Insomnia, demonstrating a token being returned.
+- [X] Step by step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
+- [X] Your refined API specification and Database Schema.
+
+Link to Vexx:
+
+https://vexx-9b4fec8c4623.herokuapp.com/
+
+PLEASE NOTE: As we are on the Django/DRF unit, the front page will automatically give a 404 error as it hasn't been created yet. For a better experience please use the following link:
+
+https://vexx-9b4fec8c4623.herokuapp.com/users/
+
+An example of a successful GET method:
