@@ -63,3 +63,99 @@ PLEASE NOTE: As we are on the Django/DRF unit, the front page will automatically
 https://vexx-9b4fec8c4623.herokuapp.com/users/
 
 An example of a successful GET method:
+
+![Picture demonstrating successful GET method.](./vexxpics/GETmethod.png)
+
+
+An example of a successful POST method that also demonstrates a token being returned:
+
+![Picture demonstrating successful POST method.](./vexxpics/POSTmethod.png)
+
+
+Instructions on how to register a new user and create a new project:
+
+Part 1 - registration
+1. User navigates to https://vexx-9b4fec8c4623.herokuapp.com/users/ 
+2. User enters a new username, password and email and then submits a POST method request - this generates a user ID number that stays unique to the user. 
+
+Example of user body data:
+
+{
+	"username": "sassykatie",
+	"password": "password",
+	"email": "sassykatie@email.com"
+}
+
+Example of backend reponse:
+
+{
+	"id": 5,
+	"last_login": null,
+	"is_superuser": false,
+	"username": "sassykatie",
+	"first_name": "",
+	"last_name": "",
+	"email": "sassykatie@email.com",
+	"is_staff": false,
+	"is_active": true,
+	"date_joined": "2024-10-27T11:06:02.138212Z",
+	"groups": [],
+	"user_permissions": []
+}
+
+Part 2 - creating a project
+1. User navigates to https://vexx-9b4fec8c4623.herokuapp.com/api-token-auth/
+2. User logs in with freshly registered account details and a token is generated that is specific to the user.
+
+Example of user login/token authentication:
+
+{
+    "username": "sassykatie",
+    "password": "password"
+}
+
+Example of backend response:
+
+{
+	"token": "037be94b60d5325438e47cceea2dc1fc7e30327f",
+	"user_id": 5,
+	"email": "sassykatie@email.com"
+}
+
+
+
+3. User navigates to https://vexx-9b4fec8c4623.herokuapp.com/project/
+4. User sumbits a title, description, a goal, an image, and a boolean of true or false as to whether the project is open to pledges or not. 
+
+Example of body data user submits for project creation:
+
+{
+	"title": "sassy katies project",
+	"description": "Selling upcycled tyres for tyreswings",
+	"goal": 100,
+	"image": "https://via.placeholder.com/300.jpg",
+	"is_open": true
+}
+
+Example of backend response:
+
+{
+	"id": 3,
+	"owner": 5,
+	"title": "sassy katies project",
+	"description": "Selling upcycled tyres for tyreswings",
+	"goal": 100,
+	"image": "https://via.placeholder.com/300.jpg",
+	"is_open": true,
+	"date_created": "2024-10-27T11:21:51.716068Z"
+}
+
+NOTE: As user is owner of this project, bearer authentication is on so that no other user other than a superuser can alter the project.
+
+
+
+
+
+
+
+
