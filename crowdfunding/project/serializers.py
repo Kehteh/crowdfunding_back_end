@@ -6,6 +6,14 @@ class PledgeSerializer(serializers.ModelSerializer):
         model = apps.get_model('project.Pledge')
         fields = '__all__'
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if instance.anonymous:
+            data.pop('supporter', None)
+        return data
+
+
+
 class ProjectSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.id')
     
