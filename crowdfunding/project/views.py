@@ -155,10 +155,10 @@
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status, permissions
-from django.shortcuts import get_object_or_404
 from .models import Project, Pledge
 from .serializers import ProjectSerializer, PledgeSerializer, ProjectDetailSerializer
+from django.http import Http404
+from rest_framework import status, permissions
 from .permissions import IsOwnerOrReadOnly
 
 
@@ -185,7 +185,12 @@ class ProjectDetail(APIView):
     ]
 
     def get_object(self, pk):
-        return get_object_or_404(Project, pk=pk)
+        try:
+            project = Project.objects.get(pk=pk)
+            self.check_object_permissions(self.request, project)
+            return project
+        except Project.DoesNotExist:
+            raise Http404
 
     def get(self, request, pk):
         project = self.get_object(pk)
@@ -193,14 +198,19 @@ class ProjectDetail(APIView):
         return Response(serializer.data)
 
     def put(self, request, pk):
-        project = self.get_object(pk)
-        serializer = ProjectDetailSerializer(
-            instance=project, data=request.data, partial=True
-        )
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+      project = self.get_object(pk)
+      serializer = ProjectDetailSerializer(
+          instance=project,
+          data=request.data,
+          partial=True
+      )
+      if serializer.is_valid():
+          serializer.save()
+          return Response(serializer.data)
+      return Response(
+          serializer.errors,
+          status=status.HTTP_400_BAD_REQUEST
+      )
 
     def delete(self, request, pk):
         project = self.get_object(pk)
