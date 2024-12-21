@@ -238,7 +238,12 @@ class PledgeDetail(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get_object(self, pk):
-        return get_object_or_404(Pledge, pk=pk)
+        try:
+            pledge = Pledge.objects.get(pk=pk)
+            self.check_object_permissions(self.request, pledge)
+            return pledge
+        except Pledge.DoesNotExist:
+            raise Http404
 
     def get(self, request, pk):
         pledge = self.get_object(pk)
